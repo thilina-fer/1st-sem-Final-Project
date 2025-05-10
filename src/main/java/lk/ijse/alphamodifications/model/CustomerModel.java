@@ -46,13 +46,18 @@ public class CustomerModel {
         }
         return null;
     }
-    public ArrayList<String> getAllCustomer() throws ClassNotFoundException , SQLException{
+    public ArrayList<CustomerDto> getAllCustomer() throws ClassNotFoundException , SQLException{
         ResultSet resultSet = CrudUtil.execute("SELECT * FROM Customer");
-        ArrayList<String> customerDtoArrayList = new ArrayList<>();
+        ArrayList<CustomerDto> customerDtoArrayList = new ArrayList<>();
 
-        while(resultSet.next()){
-            String id = resultSet.getString(1);
-            customerDtoArrayList.add(id);
+        while (resultSet.next()){
+            CustomerDto customerDto = new CustomerDto(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getString(4)
+            );
+            customerDtoArrayList.add(customerDto);
         }
         return customerDtoArrayList;
     }
@@ -71,5 +76,22 @@ public class CustomerModel {
             return nextIdString;
         }
         return tableChartacter + "001";
+    }
+    public ArrayList<String> getAllCustomerIds() throws SQLException, ClassNotFoundException {
+        ResultSet rst =  CrudUtil.execute("SELECT customer_id FROM Customer");
+        ArrayList<String> list = new ArrayList<>();
+        while (rst.next()){
+            String id = rst.getString(1);
+            list.add(id);
+        }
+        return list;
+    }
+    public String findNameById(String selectedCustomerId) throws SQLException , ClassNotFoundException{
+        ResultSet rst = CrudUtil.execute("SELECT customer_name FROM Customer WHERE customer_id = ? ",
+                selectedCustomerId);
+        if (rst.next()){
+            return rst.getString(1);
+        }
+        return null;
     }
 }

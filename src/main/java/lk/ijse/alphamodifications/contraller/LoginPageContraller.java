@@ -1,9 +1,7 @@
 package lk.ijse.alphamodifications.contraller;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -11,23 +9,18 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.alphamodifications.util.CrudUtil;
 
-import java.io.IOException;
-import java.net.URL;
 import java.sql.ResultSet;
-import java.util.Objects;
-import java.util.ResourceBundle;
 
-public class LogingPageContraller implements Initializable {
+public class LoginPageContraller {
     public Button btnLogin;
     public TextField txtPassword;
     public TextField txtUsername;
     public Button btnSignUp;
 
-    private final String userNamePattern = "^[A-Za-z0-9_]{3,}$";
+    private final String userNamePattern = "^[A-Za-z0-9_ ]{3,}$";
     private final String passwordPattern = "^[A-Za-z0-9@#$%^&+=]{6,}$";
 
     public void initialize(){
@@ -85,6 +78,19 @@ public class LogingPageContraller implements Initializable {
     }
 
 
+    public void btnSignUpOnAction(ActionEvent actionEvent) {
+        try {
+            Parent dashBoardRoot = FXMLLoader.load(getClass().getResource("/view/SignUp.fxml"));
+            Stage dashBoardStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            dashBoardStage.setScene(new Scene(dashBoardRoot));
+            dashBoardStage.setTitle("Alpha Modifications");
+            dashBoardStage.setResizable(true);
+            dashBoardStage.show();
+        }catch (Exception e){
+            e.printStackTrace();
+            new Alert(Alert.AlertType.ERROR, "SignUp Failed", ButtonType.OK).show();
+        }
+    }
 }
 
 
