@@ -182,9 +182,10 @@ public class CustomerPageContraller implements Initializable {
             }
         }
     }
-    /*public void btnResetOnAction(ActionEvent actionEvent) {
+public void btnResetOnAction(ActionEvent actionEvent) {
         restPage();
-    }*/
+    }
+
     private void loadNextId() throws SQLException, ClassNotFoundException {
         String nextId = customerModel.getNextCustomerId();
         lblCustomerId.setText(nextId);

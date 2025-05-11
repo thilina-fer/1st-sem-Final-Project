@@ -13,23 +13,20 @@ public class DashboardContraller implements Initializable {
 
     public AnchorPane ancDashboard;
 
-    public void btnGoToItemOnAction(ActionEvent actionEvent) {
-        navigateTo("/view/ItemPage.fxml");
-    }
-
-    public void btnGoToEmployeeOnAction(ActionEvent actionEvent) {
-        navigateTo("/view/EmployeePage.fxml");
-    }
-
-    public void btnGoToAttendanceOnAction(ActionEvent actionEvent) {
-        navigateTo("/view/EmployeeAttendancePage.fxml");
-    }
-
-    @Override
     public void initialize(URL location, ResourceBundle resources) {
         navigateTo("/view/ItemPage.fxml");
 
     }
+
+    public void btnGoToItemOnAction(ActionEvent actionEvent) { navigateTo("/view/CustomerPage.fxml");}
+
+    public void btnGoToEmployeeOnAction(ActionEvent actionEvent) { navigateTo("/view/EmployeePage.fxml");}
+
+    public void btnGoToAttendanceOnAction(ActionEvent actionEvent) { navigateTo("/view/EmployeeAttendancePage.fxml");}
+
+    public void btnOnActionCustomer(ActionEvent actionEvent) {  navigateTo("/view/CustomerPage.fxml");}
+
+
 
     private void navigateTo(String path) {
         try {
@@ -40,13 +37,10 @@ public class DashboardContraller implements Initializable {
             anchorPane.prefHeightProperty().bind(ancDashboard.heightProperty());
 
             ancDashboard.getChildren().add(anchorPane);
+
         }catch (Exception e){
-            new Alert(Alert.AlertType.ERROR, "2 went wrong").show();
+            new Alert(Alert.AlertType.ERROR, "Something went wrong").show();
             e.printStackTrace();
         }
-    }
-
-    public void btnOnActionCustomer(ActionEvent actionEvent) {
-        navigateTo("/view/CustomerPage.fxml");
     }
 }

@@ -1,3 +1,4 @@
+<!--
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SignUp">
+<AnchorPane prefHeight="850.0" prefWidth="1550.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.alphamodifications.contraller.SignUpPageContraller">
    <children>
       <VBox layoutX="37.0" layoutY="22.0" prefHeight="1000.0" prefWidth="727.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -69,7 +70,7 @@
             </HBox>
             <HBox prefHeight="53.0" prefWidth="727.0">
                <children>
-                  <TextField fx:id="txtEm" prefHeight="35.0" prefWidth="350.0" promptText="thilina@gmail.com" style="-fx-background-radius: 25px;">
+                  <TextField fx:id="txtEmail" prefHeight="35.0" prefWidth="350.0" promptText="thilina@gmail.com" style="-fx-background-radius: 25px;">
                      <HBox.margin>
                         <Insets left="270.0" />
                      </HBox.margin>
@@ -87,7 +88,7 @@
             </HBox>
             <HBox prefHeight="48.0" prefWidth="727.0">
                <children>
-                  <TextField prefHeight="35.0" prefWidth="350.0" promptText="Welimada" style="-fx-background-radius: 25px;">
+                  <TextField fx:id="txtAddress" prefHeight="35.0" prefWidth="350.0" promptText="Welimada" style="-fx-background-radius: 25px;">
                      <HBox.margin>
                         <Insets left="270.0" />
                      </HBox.margin>
@@ -103,7 +104,7 @@
                   </Label>
                </children>
             </HBox>
-            <TextField prefHeight="35.0" prefWidth="350.0" promptText="0777777777" style="-fx-background-radius: 25px;">
+            <TextField fx:id="txtContact" prefHeight="35.0" prefWidth="350.0" promptText="0777777777" style="-fx-background-radius: 25px;">
                <VBox.margin>
                   <Insets left="270.0" right="112.0" />
                </VBox.margin>
@@ -123,7 +124,7 @@
                   <Insets top="10.0" />
                </opaqueInsets>
             </HBox>
-            <TextField prefHeight="35.0" prefWidth="350.0" promptText="Thilina123@" style="-fx-background-radius: 25px;">
+            <TextField fx:id="txtPassword" prefHeight="35.0" prefWidth="350.0" promptText="Thilina123@" style="-fx-background-radius: 25px;">
                <VBox.margin>
                   <Insets left="270.0" right="112.0" />
                </VBox.margin>
@@ -136,14 +137,14 @@
                   <Insets left="270.0" />
                </VBox.margin>
             </Label>
-            <TextField prefHeight="35.0" prefWidth="350.0" promptText="Thilina123@" style="-fx-background-radius: 25px;">
+            <TextField fx:id="txtRePassword" prefHeight="35.0" prefWidth="350.0" promptText="Thilina123@" style="-fx-background-radius: 25px;">
                <VBox.margin>
                   <Insets left="270.0" right="112.0" />
                </VBox.margin>
             </TextField>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #000; -fx-background-radius: 25px;" text="Sign Up" textFill="#fffbfb">
+                  <Button fx:id="btnSignUp" mnemonicParsing="false" onAction="#btnSignUpOnAction" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #000; -fx-background-radius: 25px;" text="Sign Up" textFill="#fffbfb">
                      <font>
                         <Font name="Arial Bold" size="20.0" />
                      </font>
@@ -151,7 +152,7 @@
                         <Insets bottom="10.0" left="100.0" right="10.0" top="10.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #495057; -fx-background-radius: 25px;" text="Login" textFill="#fffbfb">
+                  <Button mnemonicParsing="false" onAction="#btnBackLoginOnAction" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #495057; -fx-background-radius: 25px;" text="Login" textFill="#fffbfb">
                      <font>
                         <Font name="Arial Bold" size="20.0" />
                      </font>
@@ -174,3 +175,4 @@
       </AnchorPane>
    </children>
 </AnchorPane>
+-->

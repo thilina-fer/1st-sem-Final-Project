@@ -18,7 +18,6 @@ public class LoginPageContraller {
     public Button btnLogin;
     public TextField txtPassword;
     public TextField txtUsername;
-    public Button btnSignUp;
 
     private final String userNamePattern = "^[A-Za-z0-9_ ]{3,}$";
     private final String passwordPattern = "^[A-Za-z0-9@#$%^&+=]{6,}$";
@@ -38,7 +37,7 @@ public class LoginPageContraller {
         txtPassword.setStyle("-fx-border-color: #7367F0; -fx-border-radius: 12px; -fx-background-radius: 12px;");
 
         if(!isValidUsername) txtUsername.setStyle("-fx-border-color: red; -fx-border-radius: 12px; -fx-background-radius: 12px;");
-        if (!isValidPassword) txtPassword.setStyle("-fx-border-color: red; -fx-border-radius: 12px; -fx-background-radius: 12px;");
+        if(!isValidPassword) txtPassword.setStyle("-fx-border-color: red; -fx-border-radius: 12px; -fx-background-radius: 12px;");
 
         btnLogin.setDisable(!(isValidUsername && isValidPassword));
     }
@@ -92,6 +91,3 @@ public class LoginPageContraller {
         }
     }
 }
-
-
-

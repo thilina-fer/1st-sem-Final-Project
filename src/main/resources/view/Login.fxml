@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ancLogin" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: #fff; -fx-background-color: #fff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.alphamodifications.contraller.LoginPageContraller">
+<AnchorPane fx:id="ancLogin" prefHeight="750.0" prefWidth="1550.0" style="-fx-background-color: #fff; -fx-background-color: #fff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.alphamodifications.contraller.LoginPageContraller">
    <children>
       <VBox layoutY="82.0" prefHeight="1000.0" prefWidth="664.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="936.0" AnchorPane.topAnchor="0.0">
          <children>

@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class UserModel {
-    public boolean saveUser(UserDto userDto) throws SQLException, ClassNotFoundException {
+    public static boolean saveUser(UserDto userDto) throws SQLException, ClassNotFoundException {
         return CrudUtil.execute("INSERT INTO User VALUES(?,?,?,?,?,?,?)",
                 userDto.getUserId(),
                 userDto.getUserName(),
@@ -68,7 +68,7 @@ public class UserModel {
         }
         return userDtoArrayList;
     }
-    public String getNextUserId() throws SQLException , ClassNotFoundException{
+    public static String getNextUserId() throws SQLException , ClassNotFoundException{
         ResultSet resultSet = CrudUtil.execute("SELECT customer_id FROM Customer ORDER BY customer_id DESC LIMIT 1");
         char tableChartacter = 'U';
 
