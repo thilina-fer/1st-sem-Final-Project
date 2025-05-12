@@ -12,7 +12,7 @@ public class AppInitializer extends Application {
         launch(args);
     }
     public void start(Stage primaryStage) throws Exception {
-        Parent parent = FXMLLoader.load(getClass().getResource("/view/DashboardPage.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getResource("/view/Login.fxml"));
         Scene scene = new Scene(parent);
         primaryStage.setScene(scene);
         primaryStage.setTitle("alpha modifications");

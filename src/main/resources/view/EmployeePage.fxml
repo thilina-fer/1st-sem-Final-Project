@@ -43,7 +43,7 @@
                             <font>
                                 <Font name="Arial Bold" size="16.0" />
                             </font></Label>
-                        <Label fx:id="lblEmployeeId" prefHeight="56.0" prefWidth="198.0" text="01">
+                        <Label fx:id="lblEmployeeId" onMouseClicked="#onClickTable" prefHeight="56.0" prefWidth="198.0" text="01">
                             <font>
                                 <Font size="15.0" />
                             </font></Label>

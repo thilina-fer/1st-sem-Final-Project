@@ -14,7 +14,7 @@ public class DashboardContraller implements Initializable {
     public AnchorPane ancDashboard;
 
     public void initialize(URL location, ResourceBundle resources) {
-        navigateTo("/view/ItemPage.fxml");
+       // navigateTo("/view/ItemPage.fxml");
 
     }
 
@@ -31,6 +31,7 @@ public class DashboardContraller implements Initializable {
     private void navigateTo(String path) {
         try {
             ancDashboard.getChildren().clear();
+
             AnchorPane anchorPane = FXMLLoader.load(getClass().getResource(path));
 
             anchorPane.prefWidthProperty().bind(ancDashboard.widthProperty());
