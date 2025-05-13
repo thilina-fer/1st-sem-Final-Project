@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import lk.ijse.alphamodifications.dto.EmpAttendanceDto;
 import lk.ijse.alphamodifications.dto.tm.EmpAttendanceTm;
 import lk.ijse.alphamodifications.model.EmpAttendanceModel;
@@ -195,6 +196,12 @@ public class EmployeeAttendanceContraller implements Initializable {
     }
 
     private void loadNextId()throws ClassNotFoundException ,SQLException{
+        String nextId = empAttendanceModel.getNextAttendanceId();
+        lblAttendanceId.setText(nextId);
+
+    }
+
+    public void onClickTable(MouseEvent mouseEvent) {
         EmpAttendanceTm selectedItem = tblAttendance.getSelectionModel().getSelectedItem();
 
         if (selectedItem != null){

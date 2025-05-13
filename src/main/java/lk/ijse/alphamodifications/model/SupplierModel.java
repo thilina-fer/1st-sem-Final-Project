@@ -39,7 +39,7 @@ public class SupplierModel {
         }
         return null;
     }
-    public ArrayList<SupplierDto> searchAllSuppliers() throws SQLException, ClassNotFoundException {
+    public ArrayList<SupplierDto> getAllSuppliers() throws SQLException, ClassNotFoundException {
         ResultSet resultSet = CrudUtil.execute("SELECT * FROM Supplier");
         ArrayList<SupplierDto> supplierDtoArrayList = new ArrayList<>();
         while (resultSet.next()) {
@@ -51,5 +51,20 @@ public class SupplierModel {
             supplierDtoArrayList.add(dto);
         }
         return supplierDtoArrayList;
+    }
+    public String getNextSupplierId() throws SQLException , ClassNotFoundException{
+        ResultSet resultSet = CrudUtil.execute("SELECT supplier_id FROM Supplier ORDER BY supplier_id DESC LIMIT 1");
+        char tableChartacter = 'S';
+
+        if(resultSet.next()){
+            String lastId = resultSet.getString(1);
+            String lastIdNumberString = lastId.substring(1);
+            int lastIdNumber = Integer.parseInt(lastIdNumberString);
+            int nextIdNumber = lastIdNumber + 1;
+            String nextIdString = String.format(tableChartacter + "%03d" , nextIdNumber);
+
+            return nextIdString;
+        }
+        return tableChartacter + "001";
     }
 }

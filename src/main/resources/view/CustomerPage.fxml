@@ -15,13 +15,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.alphamodifications.contraller.CustomerPageContraller">
+<AnchorPane prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.alphamodifications.contraller.CustomerPageContraller">
    <children>
       <VBox layoutX="14.0" layoutY="11.0" prefHeight="979.0" prefWidth="414.0" style="-fx-border-radius: 25px;" AnchorPane.bottomAnchor="10.600000000000023" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="11.0">
          <children>
             <HBox prefHeight="69.0" prefWidth="414.0">
                <children>
-                  <TextField prefHeight="26.0" prefWidth="202.0" promptText="Contact num">
+                  <TextField prefHeight="26.0" prefWidth="202.0" promptText="Contact num" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #FFEB3B, #FFF9C4);;">
                      <HBox.margin>
                         <Insets bottom="10.0" left="20.0" right="10.0" top="20.0" />
                      </HBox.margin>
@@ -33,7 +33,7 @@
                   </Button>
                </children>
             </HBox>
-            <HBox prefHeight="70.0" prefWidth="414.0" style="-fx-background-color: #415a77;" />
+            <HBox prefHeight="9.0" prefWidth="414.0" style="-fx-background-color: #415a77;" />
             <HBox prefHeight="56.0" prefWidth="394.0">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
@@ -58,7 +58,7 @@
                   </Label>
                </children>
             </HBox>
-            <TextField fx:id="txtName" promptText="Thilina">
+            <TextField fx:id="txtName" promptText="Thilina" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #FFEB3B, #FFF9C4);;">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -75,7 +75,7 @@
                   <Insets top="20.0" />
                </VBox.margin>
             </HBox>
-            <TextField fx:id="txtContact" promptText="0777777777">
+            <TextField fx:id="txtContact" promptText="0777777777" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #FFEB3B, #FFF9C4);;">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -92,7 +92,7 @@
                   <Insets top="20.0" />
                </VBox.margin>
             </HBox>
-            <TextField fx:id="txtAddress" promptText="welimada">
+            <TextField fx:id="txtAddress" promptText="welimada" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #FFEB3B, #FFF9C4);;">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -146,7 +146,7 @@
                   </Button>
                </children>
             </HBox>
-            <StackPane prefHeight="302.0" prefWidth="414.0">
+            <StackPane prefHeight="218.0" prefWidth="414.0">
                <children>
                   <ImageView fitHeight="262.0" fitWidth="419.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -158,11 +158,11 @@
          </children>
       </VBox>
       <VBox layoutX="452.8" layoutY="24.0" prefHeight="1000.0" prefWidth="14.0" style="-fx-background-color: #495057;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="453.0" AnchorPane.topAnchor="0.0" />
-      <AnchorPane layoutX="474.0" layoutY="11.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="467.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="474.0" layoutY="11.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #FFEB3B, #FFF9C4);;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="467.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <VBox layoutX="14.0" layoutY="156.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="156.0">
                <children>
-                  <TableView fx:id="tblCustomer" prefHeight="434.0" prefWidth="1072.0">
+                  <TableView fx:id="tblCustomer" prefHeight="551.0" prefWidth="472.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #FFEB3B, #FFF9C4);;">
                     <columns>
                       <TableColumn fx:id="colId" prefWidth="75.0" text="Customer Id" />
                       <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />

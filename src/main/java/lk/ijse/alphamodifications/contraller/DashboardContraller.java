@@ -18,13 +18,16 @@ public class DashboardContraller implements Initializable {
 
     }
 
-    public void btnGoToItemOnAction(ActionEvent actionEvent) { navigateTo("/view/CustomerPage.fxml");}
+    public void btnGoToItemOnAction(ActionEvent actionEvent) { navigateTo("/view/ItemPage.fxml");}
 
     public void btnGoToEmployeeOnAction(ActionEvent actionEvent) { navigateTo("/view/EmployeePage.fxml");}
 
     public void btnGoToAttendanceOnAction(ActionEvent actionEvent) { navigateTo("/view/EmployeeAttendancePage.fxml");}
 
     public void btnOnActionCustomer(ActionEvent actionEvent) {  navigateTo("/view/CustomerPage.fxml");}
+
+    public void btnOnActionSupplier(ActionEvent actionEvent) {  navigateTo("/view/SupplierPage.fxml");}
+
 
 
 
@@ -44,4 +47,6 @@ public class DashboardContraller implements Initializable {
             e.printStackTrace();
         }
     }
+
+
 }

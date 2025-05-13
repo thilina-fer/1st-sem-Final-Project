@@ -15,13 +15,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1600.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.alphamodifications.contraller.ItemPageContraller">
+<AnchorPane prefHeight="1000.0" prefWidth="1600.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.alphamodifications.contraller.SupplierPageController">
     <children>
-        <VBox layoutX="14.0" layoutY="11.0" prefHeight="979.0" prefWidth="414.0" style="-fx-border-radius: 25px; -fx-background-color: #fff;" AnchorPane.bottomAnchor="10.600000000000023" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="11.0">
+        <VBox layoutX="14.0" layoutY="11.0" prefHeight="979.0" prefWidth="414.0" style="-fx-border-radius: 25px;" AnchorPane.bottomAnchor="10.600000000000023" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="11.0">
             <children>
                 <HBox prefHeight="69.0" prefWidth="414.0">
                     <children>
-                        <TextField prefHeight="26.0" prefWidth="202.0" promptText="Item Name" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #C0C0C0, #F5F5F5);;">
+                        <TextField prefHeight="26.0" prefWidth="202.0" promptText="Supplier Id" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #A2DDF2, #E6F7FB);;">
                             <HBox.margin>
                                 <Insets bottom="10.0" left="20.0" right="10.0" top="20.0" />
                             </HBox.margin>
@@ -39,11 +39,11 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
                     </VBox.margin>
                     <children>
-                        <Label prefHeight="56.0" prefWidth="197.0" text="Item Id">
+                        <Label prefHeight="56.0" prefWidth="197.0" text="Supplier Id">
                             <font>
                                 <Font name="Arial Bold" size="16.0" />
                             </font></Label>
-                        <Label fx:id="lblItemId" prefHeight="56.0" prefWidth="198.0" text="01">
+                        <Label fx:id="lblSupplierId" prefHeight="56.0" prefWidth="198.0" text="01">
                             <font>
                                 <Font size="15.0" />
                             </font></Label>
@@ -51,38 +51,21 @@
                 </HBox>
                 <HBox prefHeight="18.0" prefWidth="414.0">
                     <children>
-                        <Label text="Name">
+                        <Label text="Supplier Name">
                             <HBox.margin>
                                 <Insets left="10.0" />
                             </HBox.margin>
                         </Label>
                     </children>
                 </HBox>
-                <TextField fx:id="txtName" promptText="Toyota Horn" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #C0C0C0, #F5F5F5);;">
+                <TextField fx:id="txtName" promptText="C001" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #A2DDF2, #E6F7FB);;">
                     <VBox.margin>
-                        <Insets left="10.0" right="10.0" />
+                        <Insets left="10.0" />
                     </VBox.margin>
                 </TextField>
                 <HBox prefHeight="18.0" prefWidth="414.0">
                     <children>
-                        <Label text="Quantity">
-                            <HBox.margin>
-                                <Insets left="10.0" />
-                            </HBox.margin>
-                        </Label>
-                    </children>
-                    <VBox.margin>
-                        <Insets top="20.0" />
-                    </VBox.margin>
-                </HBox>
-                <TextField fx:id="txtQuantity" promptText="10" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #C0C0C0, #F5F5F5);;">
-                    <VBox.margin>
-                        <Insets left="10.0" right="10.0" />
-                    </VBox.margin>
-                </TextField>
-                <HBox prefHeight="18.0" prefWidth="414.0">
-                    <children>
-                        <Label text="Buying Price">
+                        <Label text="Contact">
                             <HBox.margin>
                                 <Insets left="10.0" />
                             </HBox.margin>
@@ -92,23 +75,9 @@
                         <Insets top="20.0" />
                     </VBox.margin>
                 </HBox>
-                <TextField fx:id="txtBuyingPrice" promptText="3500.00" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #C0C0C0, #F5F5F5);;">
+                <TextField fx:id="txtContact" promptText="0777777777" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #A2DDF2, #E6F7FB);;">
                     <VBox.margin>
-                        <Insets left="10.0" right="10.0" />
-                    </VBox.margin>
-                </TextField>
-                <HBox prefHeight="18.0" prefWidth="414.0">
-                    <children>
-                        <Label text="Selling Price">
-                            <HBox.margin>
-                                <Insets left="10.0" top="20.0" />
-                            </HBox.margin>
-                        </Label>
-                    </children>
-                </HBox>
-                <TextField fx:id="txtSellingPrice" promptText="4500.00" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #C0C0C0, #F5F5F5);;">
-                    <VBox.margin>
-                        <Insets left="10.0" right="10.0" />
+                        <Insets left="10.0" />
                     </VBox.margin>
                 </TextField>
                 <HBox prefHeight="18.0" prefWidth="414.0" />
@@ -137,7 +106,7 @@
                         <Insets left="50.0" top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnReset" mnemonicParsing="false" onAction="#btnResetOnAction" prefHeight="30.0" prefWidth="306.0" style="-fx-background-radius: 25px; -fx-background-color: #ffb3c6;" text="Reset">
+                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="306.0" style="-fx-background-radius: 25px; -fx-background-color: #ffb3c6;" text="Reset">
                     <font>
                         <Font name="Arial Bold" size="15.0" />
                     </font>
@@ -145,7 +114,7 @@
                         <Insets left="50.0" top="10.0" />
                     </VBox.margin>
                 </Button>
-                <StackPane prefHeight="110.0" prefWidth="414.0">
+                <StackPane prefHeight="155.0" prefWidth="414.0">
                     <children>
                         <ImageView fitHeight="192.0" fitWidth="212.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -156,22 +125,20 @@
                 </StackPane>
             </children>
         </VBox>
-        <VBox layoutX="452.8" layoutY="24.0" prefHeight="1050.0" prefWidth="5.0" style="-fx-background-color: #495057;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="453.0" AnchorPane.topAnchor="0.0" />
-        <AnchorPane layoutX="474.0" layoutY="11.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="467.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox layoutX="452.8" layoutY="24.0" prefHeight="1000.0" prefWidth="14.0" style="-fx-background-color: #495057;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="453.0" AnchorPane.topAnchor="0.0" />
+        <AnchorPane layoutX="474.0" layoutY="11.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #A2DDF2, #E6F7FB);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="467.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
                 <VBox layoutX="14.0" layoutY="156.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="156.0">
                     <children>
-                        <TableView fx:id="tblItem" onMouseClicked="#onClickTable" prefHeight="586.0" prefWidth="1072.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #C0C0C0, #F5F5F5);;">
+                        <TableView fx:id="tblSupplier" onMouseClicked="#onClickTable" prefHeight="679.0" prefWidth="1072.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #A2DDF2, #E6F7FB);;">
                             <columns>
-                                <TableColumn fx:id="colId" prefWidth="75.0" text="Item Id" />
-                                <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
-                                <TableColumn fx:id="colQty" prefWidth="75.0" text="Quantity" />
-                                <TableColumn fx:id="colBuyPrice" prefWidth="75.0" text="Buying Price" />
-                                <TableColumn fx:id="colSellPrice" prefWidth="75.0" text="Selling Price" />
+                                <TableColumn fx:id="colId" prefWidth="75.0" text="Supplier Id" />
+                                <TableColumn fx:id="ColName" prefWidth="75.0" text="Name" />
+                                <TableColumn fx:id="ColContact" prefWidth="75.0" text="Contact" />
                             </columns>
-                     <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                     </columnResizePolicy>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
                         </TableView>
                     </children>
                 </VBox>
@@ -181,7 +148,7 @@
             <children>
                 <BorderPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                     <center>
-                        <Label text="Item Details" BorderPane.alignment="CENTER">
+                        <Label text="Supplier Details" BorderPane.alignment="CENTER">
                             <font>
                                 <Font name="Arial" size="20.0" />
                             </font>
@@ -190,7 +157,7 @@
                <right>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                      <image>
-                        <Image url="@../images/ef7417f39fd7a77e3386e93712366bac.jpg" />
+                        <Image url="@../images/603f4a0280ff2dcd91d2f1ecd4a43ef0-removebg-preview.png" />
                      </image>
                   </ImageView>
                </right>
