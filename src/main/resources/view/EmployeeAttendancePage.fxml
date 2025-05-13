@@ -92,7 +92,7 @@
                         <Insets top="20.0" />
                     </VBox.margin>
                 </HBox>
-                <TextField fx:id="txtttendTime" promptText="08:20:00">
+                <TextField fx:id="txtAttendTime" promptText="08:20:00">
                     <VBox.margin>
                         <Insets left="10.0" />
                     </VBox.margin>
